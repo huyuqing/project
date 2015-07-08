@@ -1,0 +1,49 @@
+
+<div class="manage_add">
+	<header class="manage_add_header">
+		<button type="button" class="btn btn-default btn-sm" onclick="history.go(-1);">
+		    <span class="glyphicon glyphicon-chevron-left"></span> 返回
+		</button>
+		<span class="space">新增小区</span>
+	</header>
+		
+	<nav class="nav  nav-pills manage_add_nav">
+		<li ui-sref-active="active">
+			<a ui-sref=".step1">
+				<span class="step">1</span> 
+				<span class="step_title">小区基本资料</span>
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</li>
+		<li ui-sref-active="active">
+			<a ui-sref=".step2">
+				<span class="step">2</span> 
+				<span class="step_title">物业公司验证</span>
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</li>
+	<!-- 	<li ui-sref-active="active">
+			<a ui-sref=".step3">
+				<span class="step">3</span> 
+				<span class="step_title">在线支付开通</span>
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</li> -->
+		<li ui-sref-active="active">
+			<a ui-sref=".step4">
+				<span class="step">4</span> 
+				<span class="step_title">小区添加完成</span>
+			</a>
+		</li>
+	</nav>
+</div>
+
+<div ng-controller="AddformController" >
+	<form  role="form" name="addForm" ng-submit="submitForm(addForm.$valid)" novalidate>
+	 	<div ui-view=""></div>
+	</form>
+
+	 <pre>
+	 	{{ areas }}
+	 </pre>
+</div> 

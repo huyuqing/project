@@ -1,0 +1,480 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft Yahei';
+}
+ul,li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/*登录页面*/
+.login{
+	background: url(../img/login_bg.jpg) no-repeat;
+	height: 1180px;
+}
+.login_logo{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.login_detail{
+	padding-top: 10%;
+	width: 60%;
+	margin: 0 auto;
+	/*padding-left: 20%;*/
+}
+.login_detail_img{
+	padding-top: 30px;
+	position: absolute;
+	left: 20%;
+	padding-left: 50px;
+}
+.login_form{
+	width: 400px;
+	height: 320px;
+	background: #09223f;
+	text-align: center;
+	position: relative;
+
+}
+.login_form .form_head{
+	color: #fff;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-size: 22px;
+}
+.form_detail{
+	width: 300px;
+	margin: 0 auto;
+}
+.form_word_code .checkbox{
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: #9e9e9e;
+}
+.form_word_code a{
+	text-decoration: none;
+	color: #9e9e9e;
+}
+.form_word_code a:hover{
+	color: #43d0e5;
+}
+.form_detail button{
+	background: #43d0e5;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.form_detail button:hover{
+	color:  #9e9e9e;
+}
+.form_signin a{
+	text-decoration: none;
+	color: #fff;
+}
+.form_signin a:hover{
+	color: #43d0e5;
+}
+.login_form .form_signin{
+	padding-top: 20px;
+}
+
+/*导航栏*/
+.main_header{
+	height: 90px;
+	padding-top: 20px;
+}
+.main_header .logo{
+	padding:0 30px;
+	width: 30%;
+	float: left;
+}
+.main_header .logo  .subtitle{
+	font-size: 18px;
+	color: #fff;
+	padding-left: 20px;
+	vertical-align: bottom;
+}
+.navbar-custom-menu{
+	float: right;
+}
+.main_header .white_circle{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #fff;
+	text-align: center;
+	vertical-align: middle;
+	color: #39cccc;
+	padding-top: 8px;
+}
+.main_header .user-menu a{
+	height: 60px;
+}
+.main_header .user_image{
+	float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}  
+.main_header .user_info{
+	float: right;
+	color: #fff;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: -2px;
+}
+.main_header .user_info p{
+	margin: 0;
+}
+.main_header .user_info .small{
+	font-size: 12px;
+}
+.main_header .nav .open>a, 
+.main_header .nav .open>a:focus,
+.main_header .nav .open>a:hover,
+.main_header .nav>li>a:focus, 
+.main_header .nav>li>a:hover{
+  background-color: #9acdcd;
+}
+/*侧边栏*/
+aside .col-sm-2{
+	padding-left: 0;
+}
+.sidebar_menu{
+	background: #222d32;
+	min-height: 1200px;
+	text-align: center;
+
+}
+.sidebar_menu li{
+	height: 150px;
+	/*width: 150px;*/
+	line-height: 30px;
+	padding: 40px 10px;
+}
+.sidebar_menu li a{
+	color: #b8c7ce;
+}
+.sidebar_menu li a i{
+	font-size: 42px;
+}
+.sidebar_menu li a p{
+	font-size: 18px;
+}
+.sidebar_menu .active,
+.sidebar_menu li:hover{
+	background: #2c3b41;
+}
+.sidebar_menu .active a,
+.sidebar_menu  a:hover{
+	color: #fff;
+}
+
+/*小区管理*/
+.manage_header{
+	height: 100px;
+	border-bottom: 1px solid #e3eaeb;
+}
+.manage_header p{
+	color: #808a98;
+	font-size: 20px;
+	line-height: 100px;
+}
+.manage_header form{
+	width: 20%;
+	margin-top: 34px;
+}
+.manage_cell{
+	width: 150px;
+	height: 150px;
+	border-radius: 85px;
+	text-align: center;
+	margin-top: 50px;
+}
+.manage_cell a{
+	color: #fff;
+}
+.manage_cell a i{
+	font-size: 40px;
+	padding-top: 50px;
+}
+.manage_origin_btn{
+	background: #fc6c53;
+}
+.manage_green_btn{
+	background: #39cccc;
+}
+.manage_gray_btn{
+	background: #d3d3d3;
+}
+.manage_origin .manage_cell:hover,
+.manage_green .manage_cell:hover{
+	opacity: 0.85;
+}
+/*添加小区*/
+.manage_add .nav-pills>li>a {
+   border-radius: 0;
+   border-top: none;
+}
+.manage_add_header{
+	padding: 20px 0;
+}
+.manage_add_header .space{
+	padding-left: 8px;
+}
+.manage_add_nav{
+	background: #eef4f3;
+	margin-bottom: 30px;
+}
+.manage_add_nav .step{
+	display: block;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #bbcdcd;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 3px;
+	float: left;
+	margin-top: -2px;
+}
+.manage_add_nav .step_title{
+	padding-left: 5px;
+	padding-right: 15px; 
+}
+.manage_add_nav i{
+	color: #bbcdcd;
+}
+.manage_add_nav .active .step{
+	background: #39cccc;
+}
+.manage_add_nav .active .step_title,
+.manage_add_nav .active i{
+	color: #39cccc;
+}
+/*步骤*/
+.manage_add_step .add_step_form{
+	padding: 30px;
+	width: 640px;
+}
+.manage_add_step .add_step_form label{
+	padding: 13px;
+	width: 125px;
+	float: left;
+}
+.manage_add_step .add_step_form input{
+	width: 350px;
+	height: 45px;
+}
+.manage_add_step .add_step_form .add_step_btn{
+	width: 125px;
+	text-align: center;
+	height: 38px;
+	margin-left: 15px;
+}
+.manage_add_step .form-horizontal .has-feedback .form-control-feedback {
+  right: 138px;
+  top: 5px;
+ }
+.manage_add_step1 .mapserchform{
+	width: 60%;
+}
+#allmap{
+	margin-top: 15px;
+	height: 450px;
+}
+.manage_add_step1 .tip{
+	color: red;
+	padding-top: 20px;
+}
+.manage_add_step1 .add_step_form label{
+	padding-left: 35px;
+}
+.manage_add_step2 .wyfile{
+	padding-top: 12px;
+}
+.manage_add_step3 .add_step_form input{
+	border: none;
+	width: 130px;
+	float: left;
+}
+.manage_add_step3 .add_step_form .pay{
+	width: 100px; 
+	height: 30px;
+	border: none;
+	margin-top: 6px;
+}
+.manage_add_step3 .green{
+	color: #39cccc;
+	font-size: 24px;
+}
+.manage_add_step3 p{
+	color: #fc6c53;
+}
+.manage_add_step4 {
+	padding: 100px;
+	text-align: center;
+}
+.manage_add_step4 .up{
+	height: 300px;
+}
+.manage_add_step4 .up span{
+	color: #fc6c53;
+	font-size: 33px;
+	padding-top: 80px;
+	padding-left: 10%;
+}
+.manage_add_step4 button{
+	margin-top: 50px;
+	margin-left: -20%;
+	height: 50px;
+	width: 180px;
+}
+/*小区详情*/
+.manage_info_header{
+	padding: 20px 0;
+	height: 80px;
+	vertical-align: middle;
+}
+.manage_info_header .info_header_btn{
+	border: none;
+	width: 80px;
+	height: 34px;
+	margin-left: 15px;
+	text-align: center;
+}
+.manage_info_header .space{
+	padding-left: 8px;
+}
+.manage_info_header .valid{
+	color: #fc6c53;
+	font-size: 16px;
+}
+.manage_info_header_right p{
+	padding-top: 6px;
+}
+.manage_info_header_right i{
+	margin-right: 10px;
+}
+.manage_info .nav-pills>li>a {
+   border-radius: 0;
+   border-top: none;
+}
+.manage_info_nav{
+	background: #eef4f3;
+	margin-bottom: 30px;
+}
+.manage_info_nav .active .step_title,
+.manage_info_nav .step_title:hover{
+	color: #39cccc;
+}
+.manage_info .nav-pills>li.active>a,
+.manage_info .nav-pills>li.active>a:hover,
+.manage_info .nav-pills>li.active>a:focus{
+	background-color: #fff;
+}
+/*基本信息*/
+.info_basic fieldset {
+	padding:10px;
+	margin:10px;
+	border:#e3eaeb solid 1px;
+} 
+.info_basic legend {
+	width: 130px;
+	background: #39cccc;
+	color: #fff;
+	border-radius: 20px;
+	font-size: 15px;
+	height: 38px;
+	padding-left: 6px;
+	margin-left: -30px;
+	line-height: 38px;
+	vertical-align: super;
+} 
+.info_basic legend i{
+	padding: 0 8px;
+	font-size: 28px;
+	vertical-align: sub;
+}
+.info_basic p{
+	padding-left: 15px;
+	color: #72bcbc
+}
+.info_basic p span{
+	color: #858d96;
+	padding-left: 20px;
+}
+/*管理信息*/
+.info_manage p{
+	padding-left: 10px;
+}
+.info_manage .first_manage_info{
+	width: 480px;
+	padding-top:20px;
+	line-height: 100px;
+}
+.info_manage .first_manage_info .orange{
+	padding-left: 20px;
+	font-size: 30px;
+	color: #fc6c53;
+	padding-top: -1px;
+}
+.info_manage .second_manage_info{
+	width: 800px;
+	padding-top:20px;
+	line-height: 100px;
+}
+.info_manage .second_manage_info .green{
+	padding-left: 20px;
+	font-size: 30px;
+	color: #39cccc;
+	padding-top: -1px;
+}
+
+
+
+.info_manage table{
+	border-bottom: #e3eaeb solid 1px;
+}
+.info_manage table tr td{
+	padding: 15px 100px 20px 20px;
+}
+.info_manage table tr td .orange{
+	padding-left: 20px;
+	font-size: 30px;
+	color: #fc6c53;
+	padding-top: 2px;
+}
+
+/*创收信息*/
+.cash_manage .first_cash_info{
+	padding-top:20px;
+	height: 70px;
+}
+.cash_manage .first_cash_info p{
+	font-size: 20px;
+	padding: 0 10px;
+}
+.cash_manage .first_cash_info .orange{
+	padding: 0 20px;
+	font-size: 35px;
+	color: #fc6c53;
+	margin-top: -10px;
+}
+.cash_manage .first_cash_info button{
+	height: 30px;
+	border: none;
+	margin-top: 4px; 
+	border-radius: 5px;
+}
+
+.fanren .active{
+    display:block;
+}
+
+.fanren  .inactive{
+    display:none;
+}

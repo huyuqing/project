@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tab</title>
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="static/js/angular.min.js"></script>
+</head>
+
+<body ng-app="components"> 
+  <h3>BootStrap Tab Component</h3> 
+  <tabs> 
+    <pane title="First Tab"> 
+      <div class="manage_add_step1 manage_add_step">
+  <form class="mapserchform">
+      <div class="input-group">
+        <input type="text" name="mapserchq" class="form-control" placeholder="搜索小区名称"/>
+        <span class="input-group-btn">
+          <button type='submit' name='mapsearch' id='mapsearch-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+  </form>
+  <div>地图</div>
+  <form class="form-horizontal add_step_form" role="form" name="addForm"  ng-Controller="AddformController">
+     <fieldset>
+          <div class="form-group has-feedback">           
+                <label for="areaName">小区名称</label>             
+                <input class="form-control" id="areaName" name="areaName" type="text" required  ng-minlength="2" ng-model='areas.areaName' />
+                <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="addForm.areaName.$dirty && addForm.areaName.$valid">
+                      <span ng-show="addForm.areaName.$error.required">不能少于两个字符</span>
+                </span>
+              
+          </div>
+          <div class="form-group has-feedback">
+              <label for="areaAddress">小区地址</label>
+                <input class="form-control" id="areaAddress" name="areaAddress" type="text" required  ng-model='areas.areaAddress' />
+                <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="addForm.areaAddress.$dirty && addForm.areaAddress.$valid"></span>
+          </div>
+         <div class="form-group has-feedback">
+                <label for="areaPhone">客服电话</label>
+                <input class="form-control" id="areaPhone" name="areaPhone" type="text" required  ng-model='areas.areaPhone' />
+                <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="addForm.areaPhone.$dirty && addForm.areaPhone.$valid"></span>
+          </div>
+          <hr/>
+          <div class="form-group">
+                <input class="btn bg-aqua-active add_step_btn" ng-disabled="addForm.$invalid" type="button" value="下一步" alt="Next" title="Next" ng-click="next()"/>
+          </div>  
+    </fieldset>
+  </form>
+</div> 
+    </pane> 
+    <pane title="Second Tab"> 
+      <div>This is the content of the second tab.</div> 
+    </pane> 
+  </tabs> 
+
+
+<script type="text/javascript">
+
+
+angular.module('components', []). 
+  directive('tabs', function() { 
+    return { 
+      restrict: 'E', 
+      transclude: true, 
+      scope: {}, 
+      controller: [ "$scope", function($scope) { 
+        var panes = $scope.panes = []; 
+  
+        $scope.select = function(pane) { 
+          angular.forEach(panes, function(pane) { 
+            pane.selected = false; 
+          }); 
+          pane.selected = true; 
+        } 
+  
+        this.addPane = function(pane) { 
+          if (panes.length == 0) $scope.select(pane); 
+          panes.push(pane); 
+        } 
+      }], 
+      template: 
+        '<div class="tabbable">' + 
+          '<ul class="nav nav-tabs">' + 
+            '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">'+ 
+              '<a href="" ng-click="select(pane)">{{pane.title}}</a>' + 
+            '</li>' + 
+          '</ul>' + 
+          '<div class="tab-content" ng-transclude></div>' + 
+        '</div>', 
+      replace: true 
+    }; 
+  }). 
+  directive('pane', function() { 
+    return { 
+      require: '^tabs', 
+      restrict: 'E', 
+      transclude: true, 
+      scope: { title: '@' }, 
+      link: function(scope, element, attrs, tabsCtrl) { 
+        tabsCtrl.addPane(scope); 
+      }, 
+      template: 
+        '<div class="tab-pane" ng-class="{active: selected}" ng-transclude>' + 
+        '</div>', 
+      replace: true 
+    }; 
+  })
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

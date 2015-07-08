@@ -1,0 +1,39 @@
+<div class="manage_info">
+	<header class="manage_info_header">
+		<div class="pull-left">
+			<button type="button" class="btn btn-default btn-sm" onclick="history.go(-1);">
+			    <span class="glyphicon glyphicon-chevron-left"></span> 返回
+			</button>
+			<span class="space">小区详情</span>
+		</div>
+		<div class="pull-right manage_info_header_right">
+			<p class="pull-left valid">有效日期：2008/8/10</p>
+			<div class="pull-right">
+				<button class="btn bg-orange info_header_btn"><i class="fa fa-cny"></i>续费</button>
+				<button class="btn bg-teal info_header_btn"><i class="fa fa-gear"></i>编辑</button>
+			</div>
+		</div>
+	</header>  
+		
+	<nav class="nav  nav-pills manage_info_nav">
+		<li ui-sref-active="active">
+			<a ui-sref=".basicinfo">			
+				<span class="step_title">基本信息</span>
+			</a>
+		</li>
+		<li ui-sref-active="active">
+			<a ui-sref=".manageinfo">			
+				<span class="step_title">管理信息</span>
+			</a>
+		</li>
+		<li ui-sref-active="active">
+			<a ui-sref=".cashinfo">			
+				<span class="step_title">创收信息</span>
+			</a>
+		</li>
+	
+	</nav>
+</div>
+
+<div ui-view=""></div>
+

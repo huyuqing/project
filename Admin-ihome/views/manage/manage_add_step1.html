@@ -1,0 +1,46 @@
+
+<div class="manage_add_step1 manage_add_step">
+	<div class="mapserchform" ng-controller="MapCtrl" >
+	    <div class="input-group">
+	      <input type="text" name="mapserch" class="form-control" placeholder="搜索小区名称" ng-model='mapserch'/>
+	      <span class="input-group-btn">
+	        <button type="button"  ng-click="search()" class="btn btn-flat"><i class="fa fa-search"></i></button>
+	      </span>
+	    </div>
+	    <!-- <div id="allmap" data-ng-init="searchmap()"></div> -->
+	    <div id="allmap"></div>
+		<p class="tip">※请在地图上查找小区位置，并点击小区标注位置。</p>
+	</div>
+	
+	<div class="form-horizontal add_step_form" >
+	   <fieldset>
+	        <div class="form-group has-feedback">           
+                <label for="areaName">小区名称 *</label>             
+                <input class="form-control" id="areaName" name="areaName" type="text" required  ng-minlength="2" ng-maxlength="6" ng-model='areas.areaName' />
+                <span ng-show="addForm.areaName.$error.minlength">不能少于两个字符</span>
+                <span ng-show="addForm.areaName.$error.maxlength">不能多于六个字符</span>
+                <span class="glyphicon glyphicon-ok form-control-feedback" 
+                      ng-show="addForm.areaName.$dirty && addForm.areaName.$valid">
+                </span>
+	            
+	        </div>
+	        <div class="form-group has-feedback">
+	            <label for="areaAddress">小区地址 *</label>
+                <input class="form-control" id="areaAddress" name="areaAddress" type="text" required  ng-model='areas.areaAddress' />
+                <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="addForm.areaAddress.$dirty && addForm.areaAddress.$valid"></span>
+	        </div>
+		    <div class="form-group has-feedback">
+                <label for="areaPhone">客服电话 *</label>
+                <input class="form-control" id="areaPhone" name="areaPhone" type="text" required  ng-model='areas.areaPhone' />
+                <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="addForm.areaPhone.$dirty && addForm.areaPhone.$valid"></span>
+	        </div>
+	        <hr/>
+	        <div class="form-group">
+                <input class="btn bg-aqua-active add_step_btn" ng-disabled="addForm.$invalid" type="button" value="下一步" alt="Next" title="Next" ui-sref="manage_add.step2"/>
+	        </div>	
+		</fieldset>
+	</div>
+</div>
+

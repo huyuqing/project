@@ -1,0 +1,54 @@
+<header class="manage_header">
+  <p class="pull-left">小区管理（共 3 小区）</p>
+  <form class="pull-right">
+    <div class="input-group">
+      <input type="text" name="q" class="form-control" placeholder="搜索..."/>
+      <span class="input-group-btn">
+        <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </form>
+</header>
+
+<section class="content">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-2">  
+      <div class="manage_origin">
+        <div class="manage_cell manage_origin_btn">
+          <a ui-sref="manage_add">
+            <i class="fa fa-plus"></i>
+            <p>添加新小区</p>
+          </a>
+        </div>  
+      </div>      
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-2" ng-repeat="area in areas">  
+      <div class="manage_green">
+        <div class="manage_cell manage_green_btn">
+          <a ui-sref="manage_info">
+            <i class="fa fa-home"></i>
+            <p>area.areaName</p>
+          </a>
+        </div>
+      </div>         
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">  
+      <div class="manage_green">
+        <div class="manage_cell manage_green_btn">
+          <a ui-sref="manage_info">
+            <i class="fa fa-home"></i>
+            <p>小区2</p>
+          </a>
+        </div>
+      </div>       
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">  
+      <div class="manage_cell manage_gray_btn">
+        <a>
+          <i class="fa fa-home"></i>
+          <p>小区3</p>
+        </a>
+      </div>       
+    </div>
+  </div>
+</section>

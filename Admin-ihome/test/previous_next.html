@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html ng-app="formApp">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    
+    <style type="text/css">
+        .active{
+            display:block;
+        }
+
+        .inactive{
+            display:none;
+        }
+    </style>
+</head>
+
+<!-- apply the module and controller to our body so angular is applied to that -->
+<body >
+    <div ng-controller="MyCtrl">
+        <li ng-class="{active: activePage.page == $index, 
+        inactive: activePage.page != $index}" ng-repeat="page in pages">
+            <!-- <p ng-bind-html-unsafe="page.content">{{page.content}}</p> -->
+            <div ng-include="page.content">{{page.content}}</div>
+            <!-- <div ng-include="'views/manage/manage_add_step1.html'"></div> -->
+            <a ng-show="pages[$index - 1]" ng-click="activePage.page = $index-1" 
+            class="previous" href="#">Previous</a>
+            <a ng-show="pages[$index + 1]" 
+            class="next" href="#" ng-click="activePage.page = $index+1">Next</a>                                          
+        </li>
+    </div> 
+    <script src="static/js/angular.min.js"></script>
+    
+    <script  type="text/javascript">
+    var adminApp = angular.module("formApp", []);
+
+    adminApp.controller('MyCtrl', function ($scope, $rootScope, $sce) {
+
+            /* Dont use a primitive but an object as ng-repeat creates 
+               a scope of its own */
+            $scope.activePage = {
+                page:0
+            };
+            // $scope.pages = [{content:"a"},{content:"b"},{content:"c"}];
+            $scope.pages = [
+                {content:'views/manage/manage_add_step1.html'},
+                {content:'views/manage/manage_add_step2.html'},
+                {content:'views/manage/manage_add_step3.html'}
+            ];
+
+             $scope.submitForm = function(isValid) {
+                // $scope.areas.areaName = "XXXX";
+
+                if (!isValid) {
+                    return;
+                }
+                // else
+                // {
+                    // $state.go("manage_add.step2");
+                // }
+            };
+             $scope.next = function(isValid){
+                if (!isValid) {
+                    return;
+                }
+                else
+                {
+                    
+                    $scope.activePage.page = $index+1;
+                }
+             }
+                 
+        });
+    </script>
+
+</body>

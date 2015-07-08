@@ -1,0 +1,26 @@
+<div class="manage_add_step manage_add_step2">
+	<div class="form-horizontal add_step_form">
+		<div class="form-group has-feedback" ng-class="{ 'has-error' : addForm.wyName.$invalid && !addForm.wyName.$pristine  && submitted}">           
+	        <label for="wyName">物业公司全称 *</label>             
+	        <input class="form-control" id="wyName" name="wyName" type="text" required  ng-minlength="2" ng-model='areas.wyName' />
+	        <p ng-show="addForm.wyName.$invalid && !addForm.wyName.$pristine" class="help-block">不能少于两个字符</p>
+	        <!-- <span style="color:red;" ng-show="addForm.wyName.$error.required">不能少于两个字符</span> -->
+	        <span class="glyphicon glyphicon-ok form-control-feedback"
+	              ng-show="addForm.wyName.$dirty && addForm.wyName.$valid"></span>	        
+	    </div>
+		<div class="form-group">
+			<label for="wyfile">营业执照上传 *</label>
+			<input class=" wyfile" type="file" id="wyfile" name="wyfile" ng-model='areas.wyfile'>
+			<!-- <span style="color:red;" ng-show="addForm.wyName.$error.required">必须上传</span> -->
+		</div>
+		<p class="help-block">
+			* 请确保本小区的物业公司资料的真实性，否则爱家微社区有权停用本小区的操作权限。
+		</p>
+		<hr/>
+		<div class="form-group">
+			<!-- <input ui-sref="manage_add.step1" type="button" class="btn bg-aqua-active add_step_btn" value="上一步" alt="Back" title="Back"> -->
+			<button ui-sref="manage_add.step1" class="btn bg-aqua-active add_step_btn" alt="Back" title="Back">上一步</button>
+            <input class="btn bg-aqua-active add_step_btn" ng-disabled="addForm.$invalid" type="submit" value="下一步" alt="Next" title="Next" />
+        </div>
+	</div>
+</div>

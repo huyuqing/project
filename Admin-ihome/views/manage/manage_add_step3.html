@@ -1,0 +1,26 @@
+
+<div class="manage_add_step3 manage_add_step">
+  <form class="form-horizontal add_step_form" role="form" name="addForm" ng-submit="submitForm(addForm.$valid)" ng-Controller="MyCtrl">
+    <fieldset>
+      <div class="form-group">           
+        <label for="coinLeft">爱家币剩余</label>             
+        <input class="form-control" id="coinLeft" name="coinLeft" type="text" required value="user.coinLeft" />
+        <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="addForm.coinLeft.$dirty && addForm.coinLeft.$valid"></span>
+        <button class="bg-orange pay" type="button" id="pay" name="pay">充值</bttton>
+      </div>
+      <div class="form-group">           
+        <label for="deduct">本次扣除</label>             
+        <input class="form-control green" id="deduct" name="deduct" type="text" required value="-2888" />
+      </div>
+      <p class="help-block">
+      * 您的爱家币不足以完成支付，请充值后再试 
+      </p>
+      <hr>
+      <div class="form-group">
+        <button ui-sref="manage_add.step2" class="btn bg-aqua-active add_step_btn pull-left" alt="Back" title="Back">上一步</button>
+        <input ui-sref="manage_add.step4" class="btn bg-aqua-active add_step_btn" ng-disabled="addForm.$invalid" type="submit" value="提交(下一步)" alt="Next" title="Next"/>
+      </div>  
+    </fieldset>
+  </form>
+</div>
